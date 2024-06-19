@@ -1,0 +1,33 @@
+﻿<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3"
+        mc:Ignorable="d"
+        Title="Payment Calculation" Height="600" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="10">
+            <Label Content="Фамилия Имя Отчество"/>
+            <TextBox x:Name="FullNameTextBox" Margin="5" />
+            <Label Content="Оклад"/>
+            <TextBox x:Name="SalaryTextBox" Margin="5"/>
+            <Label Content="Год поступления на работу"/>
+            <TextBox x:Name="YearOfEmploymentTextBox" Margin="5"/>
+            <Label Content="Процент надбавки"/>
+            <TextBox x:Name="BonusPercentageTextBox" Margin="5"/>
+            <Label Content="Отработанные дни в месяце"/>
+            <TextBox x:Name="WorkedDaysInMonthTextBox" Margin="5" TextChanged="WorkedDaysInMonthTextBox_TextChanged"/>
+            <Label Content="Рабочие дни в месяце"/>
+            <TextBox x:Name="WorkingDaysInMonthTextBox" Margin="5"/>
+            <Button Content="Рассчитать" Margin="5" Click="CalculateButton_Click"/>
+        </StackPanel>
+
+        <TextBlock x:Name="ResultTextBlock" Grid.Row="1" Margin="10" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
